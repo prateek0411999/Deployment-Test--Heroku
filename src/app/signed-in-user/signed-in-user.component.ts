@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{FileUploader} from 'ng2-file-upload';
 import {Router} from '@angular/router';
 import {RegisterUserService} from '../register-user.service';
-import{AngularFireDatabase} from '@angular/fire/database';
+
 
 import * as firebase from 'firebase';
 
@@ -23,7 +23,7 @@ export class SignedInUserComponent implements OnInit {
   attachmentList:any =[];
  
   constructor(private _route:Router,
-    private re: RegisterUserService, private db: AngularFireDatabase) { }
+    private re: RegisterUserService) { }
 
     
   ngOnInit(): void {

@@ -10,11 +10,9 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFireDatabaseModule} from '@angular/fire/database';
-import {AngularFirestoreModule} from'@angular/fire/firestore';
+
 import{environment} from '../environments/environment';
-import {AngularFireStorageModule} from '@angular/fire/storage';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,10 +27,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     ReactiveFormsModule,
     FormsModule,
     FileUploadModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule
+    
   ],
   providers: [
     AuthGuard,
